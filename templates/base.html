@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale = 1" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    .summbtn {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      margin: 20px 0;
+      border: none;
+      cursor: pointer;
+      opacity: 0.9;
+      font-size: medium;
+      margin-right: 10px;
+    }
+
+    td {
+      width: fit-content;
+      height: auto;
+    }
+
+    table {
+      text-align: left;
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    th {
+      width: 10%;
+    }
+  </style>
+
+  <title>{% block title %}Home{% endblock %}</title>
+</head>
+
+<body style=" margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%,rgba(131, 203, 236, 0.8) 100%), url(https://img.freepik.com/free-vector/abstract-blue-wavy-with-blurred-light-curved-lines-background_1409-1240.jpg?w=2000);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover;">>
+  {% block content %} {% endblock %}
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/linways/table-to-excel@v1.0.4/dist/tableToExcel.js"></script>
+  <script>
+    function myFunction() {
+      
+      // Getting the table
+      var tble = document.getElementById("table_of_items");
+      
+      // Getting the rows in table.
+      var row = tble.rows;  
+      
+      // Removing the column at index(1)
+      var i = 1; 
+      for (var j = 0; j < row.length; j++) {  
+        // Deleting the ith cell of each row.
+        row[j].deleteCell(i);
+      }
+    }
+  </script>
+
+</body>
+
+</html>
